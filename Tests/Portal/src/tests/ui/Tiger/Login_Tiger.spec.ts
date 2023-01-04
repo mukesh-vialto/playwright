@@ -16,9 +16,7 @@ test.describe("Login to Tiger and create Work Record", function() {
     test.beforeAll(async function ({ browser }) {
         if (!page && !noOfTimesLaunched) {
             page = await browser.newPage();
-            
-        //     await page.goto("https://tiger-stage.vialto.com/#/search-home");
-            loginpage = new LoginPage(page);
+                 loginpage = new LoginPage(page);
             homePage = new TigerHomePage(page);
             wrPage = new WorkRecordPage(page);
             //homePage.waitTime=200000;
@@ -31,7 +29,7 @@ test.describe("Login to Tiger and create Work Record", function() {
         //test.slow();
         await loginpage.logintoTigerApplication();
         expect(await homePage.waitForTigerPage()).toBe(true);
-        
+
     });
 
    
