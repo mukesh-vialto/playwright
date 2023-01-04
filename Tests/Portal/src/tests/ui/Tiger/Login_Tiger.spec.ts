@@ -31,6 +31,7 @@ test.describe("Login to Tiger and create Work Record", function() {
         //test.slow();
         await loginpage.logintoTigerApplication();
         expect(await homePage.waitForTigerPage()).toBe(true);
+        
     });
 
    
